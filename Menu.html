@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Page - Coffee Cove</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+    #menu_filter{
+        background-color: lightgoldenrodyellow;
+    }
+    #menu_items{
+        background-color: lightgoldenrodyellow;
+        height: 100%;
+    }
+</style>
+<body>
+    <nav>
+            <aside id="nav_one">
+                <img src="./Assests/ChatGPT Image Sep 5, 2025, 11_53_12 AM.png" alt="">
+                <h1><a href="./index.html">Coffee Cove</a></h1>
+            </aside>
+            <aside id="nav_two">
+                <a href="./About.html">About</a>
+                <a href="./Menu.html">Menu</a>
+                <a href="./Contact.html">Contact</a>
+            </aside>
+            <aside id="nav_three">
+                <i class="fa-solid fa-cart-shopping" id="cart_icon"></i>
+                <div id="cart_quatity">0</div>
+                <p id="cart_price">₹ 0.00</p>
+            </aside>
+    </nav>
+
+    <aside id="navBar_list">
+        <a href="./index.html">Home</a>
+        <a href="./About.html">About</a>
+        <a href="./Menu.html">Menu</a>
+        <a href="./Contact.html">Contact</a> 
+    </aside>
+    
+    <aside id="slidebar">
+        <div id="slidebar_one">
+            <h1>Cart</h1>
+            <i class="fa-solid fa-circle-xmark" id="close_slidebar"></i>
+        </div>
+
+        <div id="slidebar_items"></div>
+        <button id="buyBtn">Buy Now</button>
+
+    </aside>
+
+    <section id="menu_filter">
+        <h1>Our <span>Menu</span></h1>
+        <div id="filter_btns">
+            <button class="active" onclick="filterItems('card')">All</button>
+            <button onclick="filterItems('coffee')">Coffee</button>
+            <button onclick="filterItems('tea')">Tea</button>
+            <button onclick="filterItems('maincourse')">Main Course</button>
+            <button onclick="filterItems('desserts')">Desserts</button>
+        </div>
+    </section>
+    <section id="menu_items">
+        <div class="card coffee">
+            <article class="card_one">
+                <aside class="card_img">
+                    <img src="./Assests/img_1.png" alt="">
+                </aside>
+                <aside class="card_info">
+                    <h4>Espresso</h4>
+                    <p>₹40.0</p>
+                </aside>
+            </article>
+
+            <article class="card_two">
+                <aside class="card_quantity">
+                    <div class="minus">-</div>
+                    <div class="quantity">0</div>
+                    <div class="plus">+</div>
+                </aside>
+                <aside class="addToCart">
+                    <button>Add to Cart</button>
+                </aside>
+            </article>
+        </div>
+
+        <div class="card coffee">
+            <article class="card_one">
+                <aside class="card_img">
+                    <img src="./Assests/img_2.jpg" alt="">
+                </aside>
+                <aside class="card_info">
+                    <h4>Cappucino</h4>
+                    <p>₹50.0</p>
+                </aside>
+            </article>
+
+            <article class="card_two">
+                <aside class="card_quantity">
+                    <div class="minus">-</div>
+                    <div class="quantity">0</div>
+                    <div class="plus">+</div>
+                </aside>
+                <aside class="addToCart">
+                    <button>Add to Cart</button>
+                </aside>
+            </article>
+        </div>
+
+        <div class="card tea">
+            <article class="card_one">
+                <aside class="card_img">
+                    <img src="./Assests/img_3.jpg" alt="">
+                </aside>
+                <aside class="card_info">
+                    <h4>Iced Tea</h4>
+                    <p>₹80.0</p>
+                </aside>
+            </article>
+
+            <article class="card_two">
+                <aside class="card_quantity">
+                    <div class="minus">-</div>
+                    <div class="quantity">0</div>
+                    <div class="plus">+</div>
+                </aside>
+                <aside class="addToCart">
+                    <button>Add to Cart</button>
+                </aside>
+            </article>
+        </div>
+
+        <div class="card coffee">
+            <article class="card_one">
+                <aside class="card_img">
+                    <img src="./Assests/img_4.avif" alt="">
+                </aside>
+                <aside class="card_info">
+                    <h4>Cold Coffee</h4>
+                    <p>₹90.0</p>
+                </aside>
+            </article>
+
+            <article class="card_two">
+                <aside class="card_quantity">
+                    <div class="minus">-</div>
+                    <div class="quantity">0</div>
+                    <div class="plus">+</div>
+                </aside>
+                <aside class="addToCart">
+                    <button>Add to Cart</button>
+                </aside>
+            </article>
+        </div>
+
+        <div class="card desserts">
+            <article class="card_one">
+                <aside class="card_img">
+                    <img src="./Assests/img_5.jpeg" alt="">
+                </aside>
+                <aside class="card_info">
+                    <h4>Honey Cake</h4>
+                    <p>₹80.0</p>
+                </aside>
+            </article>
+
+            <article class="card_two">
+                <aside class="card_quantity">
+                    <div class="minus">-</div>
+                    <div class="quantity">0</div>
+                    <div class="plus">+</div>
+                </aside>
+                <aside class="addToCart">
+                    <button>Add to Cart</button>
+                </aside>
+            </article>
+        </div>
+
+        <div class="card desserts">
+            <article class="card_one">
+                <aside class="card_img">
+                    <img src="./Assests/img_6.jpg" alt="">
+                </aside>
+                <aside class="card_info">
+                    <h4>Croissant</h4>
+                    <p>₹120.0</p>
+                </aside>
+            </article>
+
+            <article class="card_two">
+                <aside class="card_quantity">
+                    <div class="minus">-</div>
+                    <div class="quantity">0</div>
+                    <div class="plus">+</div>
+                </aside>
+                <aside class="addToCart">
+                    <button>Add to Cart</button>
+                </aside>
+            </article>
+        </div>
+
+        <div class="card maincourse">
+            <article class="card_one">
+                <aside class="card_img">
+                    <img src="./Assests/img_7.jpg" alt="">
+                </aside>
+                <aside class="card_info">
+                    <h4>French Fries</h4>
+                    <p>₹75.0</p>
+                </aside>
+            </article>
+
+            <article class="card_two">
+                <aside class="card_quantity">
+                    <div class="minus">-</div>
+                    <div class="quantity">0</div>
+                    <div class="plus">+</div>
+                </aside>
+                <aside class="addToCart">
+                    <button>Add to Cart</button>
+                </aside>
+            </article>
+        </div>
+        
+        <div class="card maincourse">
+            <article class="card_one">
+                <aside class="card_img">
+                    <img src="./Assests/img_8.webp" alt="">
+                </aside>
+                <aside class="card_info">
+                    <h4>White Sauce Pasta</h4>
+                    <p>₹150.0</p>
+                </aside>
+            </article>
+
+            <article class="card_two">
+                <aside class="card_quantity">
+                    <div class="minus">-</div>
+                    <div class="quantity">0</div>
+                    <div class="plus">+</div>
+                </aside>
+                <aside class="addToCart">
+                    <button>Add to Cart</button>
+                </aside>
+            </article>
+        </div>
+
+        <div class="card maincourse">
+            <article class="card_one">
+                <aside class="card_img">
+                    <img src="./Assests/img_9.jpg" alt="">
+                </aside>
+                <aside class="card_info">
+                    <h4>Crispy Mushroom</h4>
+                    <p>₹170.0</p>
+                </aside>
+            </article>
+
+            <article class="card_two">
+                <aside class="card_quantity">
+                    <div class="minus">-</div>
+                    <div class="quantity">0</div>
+                    <div class="plus">+</div>
+                </aside>
+                <aside class="addToCart">
+                    <button>Add to Cart</button>
+                </aside>
+            </article>
+        </div>
+
+        <div class="card tea">
+            <article class="card_one">
+                <aside class="card_img">
+                    <img src="./Assests/img_10.webp" alt="">
+                </aside>
+                <aside class="card_info">
+                    <h4>Bubble Tea</h4>
+                    <p>₹90.0</p>
+                </aside>
+            </article>
+
+            <article class="card_two">
+                <aside class="card_quantity">
+                    <div class="minus">-</div>
+                    <div class="quantity">0</div>
+                    <div class="plus">+</div>
+                </aside>
+                <aside class="addToCart">
+                    <button>Add to Cart</button>
+                </aside>
+            </article>
+        </div>
+
+        <div class="card tea">
+            <article class="card_one">
+                <aside class="card_img">
+                    <img src="./Assests/img_11.jpg" alt="">
+                </aside>
+                <aside class="card_info">
+                    <h4>Green Tea</h4>
+                    <p>₹80.0</p>
+                </aside>
+            </article>
+
+            <article class="card_two">
+                <aside class="card_quantity">
+                    <div class="minus">-</div>
+                    <div class="quantity">0</div>
+                    <div class="plus">+</div>
+                </aside>
+                <aside class="addToCart">
+                    <button>Add to Cart</button>
+                </aside>
+            </article>
+        </div>
+
+        <div class="card desserts">
+            <article class="card_one">
+                <aside class="card_img">
+                    <img src="./Assests/img_12.jpeg" alt="">
+                </aside>
+                <aside class="card_info">
+                    <h4>Ice Cream</h4>
+                    <p>₹120.0</p>
+                </aside>
+            </article>
+
+            <article class="card_two">
+                <aside class="card_quantity">
+                    <div class="minus">-</div>
+                    <div class="quantity">0</div>
+                    <div class="plus">+</div>
+                </aside>
+                <aside class="addToCart">
+                    <button>Add to Cart</button>
+                </aside>
+            </article>
+        </div>
+    </section>
+
+    <script src="./Menu.js"></script>
+
+</body>
+</html>

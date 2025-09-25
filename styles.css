@@ -1,0 +1,776 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* ! Home page & Navbar Page */
+*{
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+body{
+    overflow-x: hidden;
+}
+section{
+    overflow-x: hidden;
+}
+nav{
+    height: 12vh;
+    width: 100%;
+    display: flex;
+    padding: 0 20px;
+    background: #FFB300;;
+    color: white;
+}
+#nav_one{
+    flex-basis: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    gap: 10px;
+}
+#nav_one > img{
+    width: 100px;
+    height: 100px;
+    color: white;
+}
+#nav_one > h1 > a{
+    text-decoration: none;
+    color: white;
+}
+#nav_one > h1{
+    font-size: 22px;
+}
+#navBar_list{
+    height: 39vh;
+    width: 130px;
+    position: absolute;
+    background-color: white;
+    z-index: 100;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    align-items: center;
+    justify-content: center;
+    left: -130px;
+}
+#navBar_list > a{
+    text-decoration: none;
+    color: #FFB300;
+    font-weight: 600;
+}
+#nav_two{
+    flex-basis: 50%;    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 65px;
+}
+#nav_two > a{
+    font-size: 18px;
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    color: white;
+}
+#nav_two > a:hover{
+    scale: 1.2;
+}
+#nav_three{
+    flex-basis: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+#cart_quatity{
+    border: 1px solid white;
+    height: 20px;
+    width: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    position: relative;
+    right: 21px;
+    bottom: 14px;
+}
+
+header{
+    background-image: url(./Assests/top-view-cup-coffee-with-copy-space.jpg);
+    height: 88vh;
+    background-size: cover;
+}
+
+header > h2{
+    font-size: 60px;
+    position: relative;
+    top: 36%;
+    left: 80px;
+}
+
+@media screen and (max-width: 480px) {
+    body{
+        overflow-x: hidden;
+    }
+    nav{
+        width: 100%;
+    }
+    #nav_two > a{
+        display: none;
+    }
+    #nav_three{
+        margin-right: 10px;
+        gap: 10px;
+    }
+    #cart_price{
+        width: 51px;
+    }
+    header{
+        background-image: url(./Assests/top-view-cup-coffee-with-copy-space.jpg);
+        height: 25vh;
+        background-size: cover;
+    }
+    header > h2{
+        position: absolute;
+        top: 180px;
+        left: 35px;
+        font-size: 25px;
+    }
+
+}
+
+/*! Bakery Description Page - 2 */
+
+#bakery_description{
+    height: 40vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 18px;
+    background-color: #FFB300;
+    border: 20px solid white;
+    border-radius: 10px;
+}
+
+#bakery_description > h1{
+    font-size: 55px;
+}
+#bakery_description > p{
+    font-size: 20px;
+}
+#bakery_description > button{
+    padding: 15px 25px;
+    font-weight: 550;
+    background-color: white(230, 230, 13);
+    border: none;
+    border-radius: 10px;
+}
+
+@media screen and (max-width: 480px) {
+    #bakery_description{
+        height: 25vh;
+        gap: 2px;
+    }
+    #bakery_description > h1{
+        font-size: 28px;
+    }
+    #bakery_description > p{
+        font-size: 12px;
+    }
+    #bakery_description > button{
+        margin-top: 16px;
+        padding: 5px 8px;
+        font-size: 10px;
+    }
+}
+/*! Bakery Items Page - 3 */
+
+#bakery_items{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#bakery_items > h2{
+    font-size: 38px;
+}
+#item_container {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    width: 100%;
+    gap: 20px 0px;
+    margin-left: 60px;
+}
+
+.items > img{
+    height: 250px;
+    width: 250px;
+    border-radius: 10px;
+}
+
+.items > img:hover{
+    scale: 1.1;
+}
+
+.items > p{
+    margin-top: 10px;
+    width: 250px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+@media screen and (max-width: 480px) {
+    #bakery_items{
+        height: 145vh;
+    }
+    #bakery_items > h2{
+        font-size: 25px;
+    }
+    #item_container{
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+    .items > img{
+        width: 165px;
+        height: 165px;
+    }
+    .items > p{
+        width: 165px;
+    }
+}
+
+/*! Footer Section Page - 4 */
+
+#footer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: #FFB300;
+}
+
+footer{
+    height: 25vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 8px;
+}
+footer > h2{
+    font-size: 28px;
+}
+footer > p{
+    font-size: 12px;
+    font-weight: 500;
+}
+footer > button {
+    padding: 15px 25px;
+    background-color: lightgoldenrodyellow;
+    border: 0;
+    border-radius: 10px;
+    width: 150px;
+    font-weight: 600;
+}
+
+span{
+    color: #FFB300;
+}
+
+@media screen and (max-width: 480px) {
+    #footer{
+        height: 18vh;
+        gap: 4px;
+        padding: 15px;
+    }
+    footer > h2{
+        font-size: 26px;
+    }
+    footer > p{
+        font-size: 9.5px;
+        text-align: center;
+        width: 80%;
+    }
+    footer > button{
+        margin-top: 10px;
+        padding: 7px 12px;
+        width: 100px;
+    }
+}
+
+/*! About Us - Page 1 */
+
+#about_page{
+    background: url("./Assests/about_1.jpg");
+    height: 88vh;
+    background-size: auto;
+    color: white;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+
+#about_page > h2{ 
+    font-size: 35px;
+}
+
+#des_1{
+    display: flex;
+    gap: 20px;
+}
+
+#des_1 > img{
+    height: 215px;
+    width: 200px;
+    border: 3px solid white;
+}
+#des_1 > img:hover{
+    scale: 1.1;
+}
+
+#about_page > #des_2{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 40%;
+}
+
+@media screen and (max-width: 480px) {
+    #about_page{
+        padding: 20px;
+        gap: 20px;
+    }
+    #des_1{
+        margin-top: 20px;
+    }
+    #about_page > h2{
+        margin-top: 15px;
+        font-size: 25px;
+    }
+    #des_1 > img{
+        height: 125px;
+        width: 120px;
+    }
+    #about_page > #des_2{
+        width: 100%;
+        color: white;
+    }
+}
+
+/*! About Us - Page 2 */
+#about_desc{
+    background-image: url("./Assests/coffee_beans.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 46%;
+    display: flex;
+    height: 75vh;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+}
+#desc_one > h2, #desc_three > h2{
+    font-size: 32px;
+}
+#desc_one{
+    flex-basis: 35%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+#desc_two{
+    flex-basis: 30%;
+}
+#desc_two > img{
+    height: 350px;
+    width: 350px;
+}
+#desc_three{
+    flex-basis: 35%;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: end;
+    text-align: end;
+    gap: 15px;
+}
+
+@media screen and (max-width: 480px) {
+    #about_desc{
+        height: 140vh;
+        flex-direction: column;
+        gap: 100px;
+    }
+    #desc_one > h2, #desc_three > h2{
+        font-size: 28px;
+    }
+    #desc_two > img{
+        height: 300px;
+        width: 300px;
+        position: relative;
+        top: 25px;
+        left: 10px;
+    }
+    #desc_three{
+        justify-content: start;
+        align-items: start;
+        text-align: start;
+        flex-basis: 50%;
+        gap: 10px;
+    }
+}
+
+
+/*! About Us - Page 3 */
+
+footer{
+    height: 25vh;
+}
+
+/*! Contact Me - Page 1 */
+
+#contact_page{
+    display: flex;
+    height: 88vh;
+    padding: 50px;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+#contact_one{
+    flex-basis: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+#contact_one > h2{
+    font-size: 35px;
+}
+form > input{
+    height: 50px;
+    width: 100%;
+    border: 1px solid black;
+    padding: 20px;
+    border-radius: 5px;
+}
+[type="submit"]{
+    background-color: #FFB300;
+    font-weight: 500;
+    font-size: 16px;
+    padding: 0px;
+}
+form > textarea{
+    border: 1px solid black;
+    padding: 20px;
+    border-radius: 5px;
+}
+#contact_two{
+    flex-basis: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+#contact_two > h2{
+    font-size: 35px;
+}
+#contact_details{
+    height: 150px;
+    width: 350px;
+    background-color: #FFB300;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+}
+#contact_two > img{
+    height: 250px;
+    width: 250px;
+    border: 5px solid black;
+    border-radius: 50%;
+    padding: 10px;
+    background-color: #FFB300;
+}
+
+@media screen and (max-width: 480px) {
+    #contact_page{
+        flex-direction: column;
+        gap: 100px;
+        height: 160vh;
+    }
+    #contact_one{
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    form > input, textarea{
+        width: 80vw;
+    }
+    #contact_two{
+        height: 50vh;
+    }
+}
+
+/*! Menu Page - 1 */
+
+#menu_filter{
+    padding: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    height: 15vh;
+    overflow: hidden;
+}
+#menu_filter > h1{
+    margin-top: 20px;
+}
+#filter_btns > .active{
+    background-color: #FFB300;
+    font-weight: 500;
+    border: 2px solid black;
+}
+#filter_btns{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+#filter_btns > button{
+    height: 50px;
+    width: 100px;
+    border: 2px solid #FFB300;
+    background-color: white;
+    border-radius: 20px;
+    font-weight: 500;
+}
+
+#menu_items{
+    display: flex;
+    padding: 50px;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 50px;
+}
+
+.card{
+    border: 1px solid rgba(0, 0, 0, 0.094);
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #fff;
+    box-shadow: black 20px;
+}
+
+.card_img > img{
+    height: 250px;
+    width: 230px;
+}
+.card_info{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap:20px;
+}
+.card_info > h4{
+    font-size: 18px;
+}
+.card_two{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+.card_quantity{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+.card_quantity {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+}
+.minus,.plus{
+    height: 20px;
+    width: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-weight: 600;
+    background-color:#FFB300;
+    color: white;
+    cursor: pointer;
+}
+.quantity{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.addToCart{
+    display: flex;
+    gap: 10px;
+}
+.addToCart > button{
+    padding: 10px 15px;
+    background-color: #FFB300;
+    color: black;
+    font-weight: 500;
+    border: none;
+    border-radius: 5px;
+}
+
+#slidebar{
+    height: 100vh;
+    width: 350px;
+    position: absolute;
+    top: 0px;
+    background-color: #fff;
+    right: -350px;
+    transition: all 1s 0s ease;
+    overflow-y: scroll;
+    z-index: 1;
+}
+
+#slidebar_one{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 35px;
+    background-color: rgba(0, 0, 0, 0.856);
+}
+#slidebar_one > h1{
+    font-size: 25px;
+    font-weight: 650;
+    color: white;
+}
+#slidebar_one > i{
+    font-size: 22px;
+    font-weight: 500;
+    color: white;
+}
+
+
+#slidebar_items{
+    flex: 1;
+    overflow-y: auto;
+    padding: 10px;
+    height: 75%;
+}
+.slidebar_item{
+    padding: 12px 8px;
+    background: #FFB300;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    transition: transform 0.2s ease;
+}
+.slidebar_item h1{
+    font-size: 1rem;
+    color: black;
+    margin-bottom: 6px;
+}
+.slidebar_item p {
+    font-size: 0.9rem;
+    color: #fff;
+    margin: 5px 0;
+}
+#slidebar_item > i{
+    font-size: 16px;
+}
+
+#buyBtn{ 
+    margin: 16px;
+    background: #FFB300;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin-top:
+    
+    15px;
+    width: 90%;
+}}
+#buyBtn:hover {
+    background: orangered;
+}
+
+.removeBtn{
+    background-color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 10px;
+    font-weight: 500;
+    font-size: 12px;
+}
+
+.cart_summary{
+    font-size: 10px;
+}
+
+
+@media screen and (max-width: 480px) {
+    .card{
+        gap: 5px;
+    }
+    #menu_filter{
+        height: 25vh;
+    }
+    #filter_btns{
+        display: grid;
+        grid-template-columns: auto auto auto;
+        height: 20vh;
+    }
+    .card_img > img{
+        height: 120px;
+        width: 110px;
+    }
+    .card_info{
+        gap: 3px;
+    }
+    .card_info > h4{
+        font-size: 12px;
+    }
+    .card_two {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+    }
+    .card_info > p{
+        font-size: 12px;
+    }
+    #menu_items{
+        display: grid;
+        grid-template-columns: auto auto;
+        padding: 40px;
+        gap: 25px 50px;
+    }
+}
