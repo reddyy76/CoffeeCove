@@ -1,4 +1,4 @@
-#☕ Coffee Cove — Delight in Every Cup
+☕ Coffee Cove — Delight in Every Cup
 
 Here is webiste link : 
 https://coffeecoves.netlify.app/
