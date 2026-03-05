@@ -3,7 +3,7 @@
 Here is webiste link : 
 https://coffeecoves.netlify.app/
 
-Coffee Cove is a responsive coffee and bakery website built using HTML, CSS, and JavaScript. It’s designed to showcase a cozy café experience online, highlighting delicious drinks, snacks, and bakery items in a visually appealing layout. The project demonstrates clean code structure, modern design, and interactive features suitable for real-world web portfolios.
+Coffee Cove is a responsive coffee and bakery website built using HTML, CSS, and JavaScript. It’s designed to showcase a cozy café experience online, highlighting delicious drinks, snacks, and bakery items in a visually appealing layout. The project demonstrates clean code structure, modern design, and interactive features suitable for real-world web portfolio.
 
 🌟 Key Features
 
